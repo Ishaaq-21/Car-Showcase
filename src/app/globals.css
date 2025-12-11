@@ -1,9 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  --font-display: "Inter", "sans-serif";
+  --color-black-100: #2b2c35;
+
+  /* Color Primary blue */
+  --color-primary-blue: #2b59ff;
+  --color-primary-blue-100: #f5f8ff;
+
+  /* Color Secondary orange */
+  --color-secondary-orange: #f79761;
+
+  /* Light white */
+  --color-light-white: rgba(59, 60, 152, 0.03);
+  --color-light-white-100: rgba(59, 60, 152, 0.02);
+
+  --color-grey: #747a88;
+
+  --background-image-pattern: url("/pattern.png");
+  --background-image-hero-bg: url("/hero-bg.png");
+}
 * {
   margin: 0;
   padding: 0;
