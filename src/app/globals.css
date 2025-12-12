@@ -30,9 +30,10 @@
 }
 
 /* START: General styles */
-.max-width {
-  @apply max-w-[1440px] mx-auto;
-}
+@layer utilities {
+  .max-width {
+    @apply max-w-[1440px] mx-auto;
+  }
 
 .padding-x {
   @apply sm:px-16 px-6;
