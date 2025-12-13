@@ -30,10 +30,7 @@
   --background-image-hero-bg: url("/hero-bg.png");
 }
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Manrope", sans-serif;
 }
 
 /* START: General styles */
@@ -42,32 +39,32 @@
     @apply max-w-[1440px] mx-auto;
   }
 
-.padding-x {
-  @apply sm:px-16 px-6;
-}
+  .padding-x {
+    @apply sm:px-16 px-6;
+  }
 
-.padding-y {
-  @apply py-4;
-}
+  .padding-y {
+    @apply py-4;
+  }
 
-.flex-center {
-  @apply flex items-center justify-center;
-}
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
 
-.flex-between {
-  @apply flex justify-between items-center;
-}
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
 
-.custom-btn {
-  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+  .custom-btn {
+    @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+  }
+  .hover-effect {
+    @apply transition duration-300;
+  }
 }
 /* END: General styles */
 
 /* START: Hero styles */
-.hero {
-  @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
-}
-
 .hero__title {
   @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
 }
