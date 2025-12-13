@@ -2,10 +2,8 @@ import Hero from "../components/organism/Hero";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="overflow-hidden">
-        <Hero />
-      </main>
-    </div>
+    <main className="relative overflow-hidden min-h-screen flex-center">
+      <Hero />
+    </main>
   );
 }
