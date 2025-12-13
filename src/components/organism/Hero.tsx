@@ -4,7 +4,7 @@ import Container from "./common/Container";
 const Hero = () => {
   return (
     <Container>
-      <div className="flex flex-col lg:flex-row gap-5 items-center pt-36 sm:pt-5  h-full">
+      <div className="flex flex-col lg:flex-row gap-5 items-center pt-28 sm:pt-5  h-full">
         <div className="text flex-1">
           <h1 className="hero__title ">
             Find, book, rent a car—quick and super easy!
