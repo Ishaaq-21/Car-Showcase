@@ -3,6 +3,13 @@
 @import "tailwindcss";
 
 @theme {
+  /* container breakpoints */
+  --container-sm: 24rem; /* 384px */
+  --container-md: 40rem; /* 640px */
+  --container-lg: 64rem; /* 1024px */
+  --container-xl: 80rem; /* 1280px */
+  --container-2xl: 96rem; /* 1536px */
+
   --font-display: "Inter", "sans-serif";
   --color-black-100: #2b2c35;
 
