@@ -19,7 +19,7 @@
 
 #marscode 
 /.marscode
-
+/.vscode
 # production
 /build
 
