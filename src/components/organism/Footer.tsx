@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "./common/Container";
+import Container from "../common/Container";
 import Logo from "../atoms/Logo";
 import Link from "next/link";
 import { about, company, Socials } from "@/src/data/footer";
