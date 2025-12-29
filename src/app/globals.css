@@ -34,6 +34,16 @@
 }
 
 /* START: General styles */
+@layer base {
+  input {
+    outline: none;
+    border: none;
+  }
+  input:focus {
+    outline: none;
+    border: none;
+  }
+}
 @layer utilities {
   .max-width {
     @apply max-w-[1440px] mx-auto;
@@ -81,7 +91,8 @@
 }
 
 .home__filters {
-  @apply mt-12 w-full  items-center flex-wrap gap-5;
+
+  @apply mt-12 w-full flex justify-between  items-center flex-wrap gap-5;
 }
 
 .home__filter-container {
@@ -153,7 +164,7 @@
 }
 
 .car-details__main-image {
-  @apply relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg;
+  @apply relative bg-pattern w-full h-40 bg-white bg-cover bg-center rounded-lg;
 }
 /* END: Car Details styles */
 
@@ -163,7 +174,8 @@
 }
 
 .custom-filter__options {
-  @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black focus:outline-none sm:text-sm;
+
+  @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black  focus:outline-none sm:text-sm;
 }
 /* END: Custom Filter styles */
 
@@ -221,7 +233,8 @@
 }
 
 .search-manufacturer__options {
-  @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black focus:outline-none sm:text-sm;
+
+  @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black  focus:outline-none sm:text-sm;
 }
 
 .search-manufacturer__option {
