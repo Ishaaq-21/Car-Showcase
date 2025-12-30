@@ -58,22 +58,20 @@ const SearchManufacturer = ({
 
           {/* Transition for displaying the options */}
           <Transition
-            as={Fragment} // group multiple elements without introducing an additional DOM node i.e., <></>
+            as={Fragment}
             leave="transition ease-in duration-100"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-            afterLeave={() => setQuery("")} // Reset the search query after the transition completes
+            afterLeave={() => setQuery("")}
           >
-            <ComboboxOptions
-              className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
-              static
-            >
+            {/* Removed 'static' prop so Headless UI manages visibility */}
+            <ComboboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm min-h-[600px]">
               {filteredManufacturers.length === 0 && query !== "" ? (
                 <ComboboxOption
                   value={query}
                   className="search-manufacturer__option"
                 >
-                  Create &quot;{query}&quot;
+                  Create "{query}"
                 </ComboboxOption>
               ) : (
                 filteredManufacturers.map((item) => (
@@ -96,15 +94,14 @@ const SearchManufacturer = ({
                           {item}
                         </span>
 
-                        {/* Show an active blue background color if the option is selected */}
                         {selected ? (
                           <span
                             className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-                              active
-                                ? "text-white"
-                                : "text-pribg-primary-purple"
+                              active ? "text-white" : "text-primary-purple"
                             }`}
-                          ></span>
+                          >
+                            {/* You might want an icon here, like a Checkmark */}
+                          </span>
                         ) : null}
                       </>
                     )}
