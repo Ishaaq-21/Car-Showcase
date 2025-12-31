@@ -12,3 +12,22 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
 
   return rentalRatePerDay.toFixed(0);
 };
+export default async function fetchCars(manufacturer: string) {
+  if (manufacturer === "") throw Error("Please provide a manufacturer name");
+  const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla`;
+  const options = {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "3786926bd9msh6260f10abfd3e94p15c651jsn1211f31bc268",
+      "x-rapidapi-host": "cars-by-api-ninjas.p.rapidapi.com",
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error(error);
+  }
+}
