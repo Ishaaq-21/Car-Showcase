@@ -29,7 +29,7 @@ const CarCard = ({ car }: CarCardProps) => {
         <span className="self-start text-[14px] leading-[17px] font-semibold">
           $
         </span>
-        {carRent}
+        {!carRent || 50}
         <span className="self-end text-[14px] leading-[17px] font-medium">
           /day
         </span>
@@ -64,7 +64,7 @@ const CarCard = ({ car }: CarCardProps) => {
           </div>
           <div className="car-card__icon">
             <Image src="/gas.svg" width={20} height={20} alt="seat" />
-            <p className="car-card__icon-text">{city_mpg} MPG</p>
+            <p className="car-card__icon-text">{!city_mpg || 30} MPG</p>
           </div>
         </div>
 
