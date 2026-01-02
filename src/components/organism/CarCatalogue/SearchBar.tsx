@@ -1,11 +1,19 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import SearchManufacturer from "./SearchManufacturer";
+import fetchCars from "@/src/utils";
 
 const SearchBar = () => {
   const [manufacturer, setManufacturer] = useState("");
   const [allCars, setAllCars] = useState<null | []>(null);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const carsList = await fetchCars(manufacturer);
+      setAllCars(carsList);
+    };
+    fetchData();
+  }, [manufacturer]);
   const handleFormSubmit = () => {};
 
   return (
