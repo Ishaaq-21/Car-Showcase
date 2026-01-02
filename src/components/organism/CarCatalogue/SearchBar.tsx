@@ -1,7 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SearchManufacturer from "./SearchManufacturer";
 import fetchCars from "@/src/utils";
+import CarGrid from "./CarGrid";
 
 const SearchBar = () => {
   const [manufacturer, setManufacturer] = useState("");
@@ -34,11 +35,7 @@ const SearchBar = () => {
           Oops! there are no available cars in your chosen maker | model
         </p>
       ) : (
-        <div>
-          {allCars.map((car, index) => (
-            <p key={index}>{car.model as string}</p>
-          ))}
-        </div>
+        <CarGrid carsList={allCars} />
       )}
     </div>
   );
