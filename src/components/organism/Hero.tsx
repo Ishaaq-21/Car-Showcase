@@ -19,7 +19,7 @@ const Hero = () => {
             </button>
           </div>
           <div className="relative lg:static flex-1 flex justify-end items-end w-full mt-10 lg:mt-0">
-            <div className="image-car-container relative w-full sm:w-3/4 md:w-3/5 h-64 lg:w-[90%] lg:h-100 md:-translate-x-20 lg:-translate-x-10 ">
+            <div className="image-car-container relative w-full sm:w-3/4 md:w-3/5 h-64 lg:w-[90%] lg:h-100 md:-translate-x-20 lg:-translate-x-10 self-end">
               <Image
                 priority
                 src={"/hero.png"}
@@ -27,7 +27,7 @@ const Hero = () => {
                 fill={true}
               />
             </div>
-            <div className="absolute w-full lg:w-1/2 h-112.5 lg:h-screen -skew-y-6 -top-10 lg:-top-1/5 -right-1/4 lg:-right-10 -z-10">
+            <div className="absolute w-full lg:w-1/2 h-112.5 lg:h-screen -skew-y-6 -top-28 lg:-top-1/10 -right-1/4 lg:-right-10 -z-10 ">
               <Image priority src="/hero-bg.png" alt="" fill={true} />
             </div>
           </div>
