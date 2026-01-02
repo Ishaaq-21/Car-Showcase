@@ -1,12 +1,8 @@
-"use client";
-import { carManufacturers } from "@/src/data/cars";
-import React from "react";
 import SearchBar from "./SearchBar";
 
 const CarFilter = () => {
-  const handleFormSubmit = () => {};
   return (
-    <div className="flex justify-between items-center">
+    <div className="car-filter min-h-100">
       <SearchBar />
     </div>
   );
