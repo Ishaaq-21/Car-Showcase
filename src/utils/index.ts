@@ -15,7 +15,7 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
   return rentalRatePerDay.toFixed(0);
 };
 export default async function fetchCars(manufacturer: string) {
-  if (manufacturer === "") throw Error("Please provide a manufacturer name");
+  // if (manufacturer === "") throw Error("Please provide a manufacturer name");
   const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla`;
   const options = {
     method: "GET",
@@ -50,4 +50,18 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
   url.searchParams.append("angle", `${angle}`);
 
   return `${url}`;
+};
+
+export type carPropType = "city_mpg" | "highway_mpg" | "combination_mpg";
+export const generateCarRandomNumber = (carProp: carPropType) => {
+  switch (carProp) {
+    case "city_mpg":
+      return Math.floor(Math.random() * (40 - 20 + 1)) + 20;
+    case "highway_mpg":
+      return Math.floor(Math.random() * (120 - 80 + 1)) + 80;
+    case "combination_mpg":
+      return Math.floor(Math.random() * (35 - 18 + 1)) + 18;
+    default:
+      return Math.floor(Math.random() * (35 - 18 + 1)) + 18;
+  }
 };
