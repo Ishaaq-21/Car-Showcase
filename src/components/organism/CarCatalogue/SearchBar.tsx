@@ -16,12 +16,11 @@ const SearchBar = () => {
     fetchData();
   }, [manufacturer]);
   const handleFormSubmit = () => {};
-
   return (
     <div>
       <form
         onSubmit={handleFormSubmit}
-        className="flex justify-between items-center"
+        className="flex justify-between items-center mb-10"
       >
         <SearchManufacturer
           manufacturer={manufacturer}
@@ -29,9 +28,11 @@ const SearchBar = () => {
         />
       </form>
       {!allCars ? (
-        <div>Please search a car model or maker</div>
+        <div className="mt-5 text-lg font-semibold pl-2 mx-auto w-fit">
+          Please search a car model or maker
+        </div>
       ) : allCars.length < 1 ? (
-        <p className="text-2xl font-semibold text-red">
+        <p className="text-2xl font-semibold text-red w-fit mx-auto">
           Oops! there are no available cars in your chosen maker | model
         </p>
       ) : (
