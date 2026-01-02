@@ -8,7 +8,11 @@ import {
   TransitionChild,
 } from "@headlessui/react";
 import { CarProps } from "@/src/types";
-import { generateCarImageUrl } from "@/src/utils";
+import {
+  carPropType,
+  generateCarImageUrl,
+  generateCarRandomNumber,
+} from "@/src/utils";
 
 interface CarDetailsProps {
   isOpen: boolean;
@@ -114,7 +118,12 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                         <h4 className="text-grey capitalize">
                           {key.split("_").join(" ")}
                         </h4>
-                        <p className="text-black-100 font-semibold">{value}</p>
+                        <p className="text-black-100 font-semibold">
+                          {typeof value === "number" ||
+                          !value.includes("premium subscribers")
+                            ? value
+                            : generateCarRandomNumber(key as carPropType)}
+                        </p>
                       </div>
                     ))}
                   </div>
